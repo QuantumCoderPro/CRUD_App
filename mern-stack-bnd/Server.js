@@ -31,7 +31,10 @@ const { env } = require('process');
  app.use(bodyParser.json());
  
  // Enabled CORS
- app.use(cors());
+ app.use(cors({
+    origin: 'https://crud-app3-9qcp.onrender.com'
+  }));
+  
  
  // Setup for the server port number
  const port = process.env.PORT || 4000;
