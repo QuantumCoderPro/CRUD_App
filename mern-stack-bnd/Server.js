@@ -6,10 +6,10 @@
  mongoose = require('mongoose');
  require('dotenv').config();
  
- // MongoDB Databse url
+ 
 
 
-
+// MongoDB Databse url
  var mongoDatabase = process.env.MONGO_URL;
  
  
