@@ -19,6 +19,7 @@ console.log(B_URL)
 
   useEffect(() => {
     getEmployeeList();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getEmployeeList = () => {
