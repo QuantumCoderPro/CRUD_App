@@ -34,7 +34,9 @@ const { env } = require('process');
  
  // Enabled CORS
  app.use(cors({
-    origin: 'https://crud-app3-9qcp.onrender.com'
+    origin: 'http://localhost:3000', // Allow requests from this origin
+    methods: ['GET', 'POST'],         // Allow only GET and POST requests
+    allowedHeaders: ['Content-Type'], // Allow only specified headers
   }));
   
  
