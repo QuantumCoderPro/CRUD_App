@@ -24,7 +24,7 @@
 //  );
 
 app.get('/', (req, res) => {
-    mongoose.connect(mongoDatabase, { useNewUrlParser: true, useUnifiedTopology: true }).then(
+    mongoose.connect(mongoDatabase).then(
       () => {
         console.log('Database is connected');
         res.send('Database connected successfully'); // Send response to front end
@@ -53,7 +53,7 @@ const { env } = require('process');
  const port = process.env.PORT || 4000;
 //  app.get('/',(req,res)=>{res.send("hello world")})
  // Routes Configuration
- 
+
  app.use('/employees', employeeRoutes);
  
  // Staring our express server
