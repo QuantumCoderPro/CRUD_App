@@ -17,11 +17,24 @@
  const app = express();
  mongoose.Promise = global.Promise;
  
- // Connect Mongodb Database
- mongoose.connect(mongoDatabase, { useNewUrlParser: true }).then(
- () => { console.log('Database is connected') },
- err => { console.log('There is problem while connecting database ' + err) }
- );
+//  // Connect Mongodb Database
+//  mongoose.connect(mongoDatabase, { useNewUrlParser: true, useUnifiedTopology: true}).then(
+//  () => { console.log('Database is connected') },
+//  err => { console.log('There is problem while connecting database ' + err) }
+//  );
+
+app.get('/', (req, res) => {
+    mongoose.connect(mongoDatabase, { useNewUrlParser: true, useUnifiedTopology: true }).then(
+      () => {
+        console.log('Database is connected');
+        res.send('Database connected successfully'); // Send response to front end
+      },
+      err => { 
+        console.log('There is problem while connecting database ' + err);
+        res.status(500).send('Error connecting to database'); // Send error response
+     }
+    );
+  });
  
  // All the express routes
  const employeeRoutes = require('./Routes/Employee.route');
@@ -38,8 +51,9 @@ const { env } = require('process');
  
  // Setup for the server port number
  const port = process.env.PORT || 4000;
- app.get('/',(req,res)=>{res.send("hello world")})
+//  app.get('/',(req,res)=>{res.send("hello world")})
  // Routes Configuration
+ 
  app.use('/employees', employeeRoutes);
  
  // Staring our express server
