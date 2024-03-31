@@ -25,10 +25,6 @@ const EditEmployee = () => {
     phone: "",
   });
 
-  useEffect(() => {
-    getEmployeeById();
-  }, []);
-
   const getEmployeeById = () => {
     axios
       .get(`${B_URL}/employees/editEmployee/${id}`)
@@ -45,6 +41,12 @@ const EditEmployee = () => {
         console.error("Error fetching employee:", error);
       });
   };
+  
+  useEffect(() => {
+    getEmployeeById();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id]);
+
 
   const handleChange = (event) => {
     setFormData({
