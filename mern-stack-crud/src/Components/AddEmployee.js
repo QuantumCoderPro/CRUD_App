@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const AddEmployee = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -9,6 +11,9 @@ const AddEmployee = () => {
     email: '',
     phone: ''
   });
+
+  const B_URL = process.env.REACT_APP_BACKEND_URL
+
 
   const [errors, setErrors] = useState({
     firstName: '',
@@ -45,7 +50,7 @@ const AddEmployee = () => {
   
     if (Object.keys(newErrors).length === 0) {
       try {
-        await axios.post('http://localhost:4000/employees/addEmployee', formData);
+        await axios.post(`${B_URL}/employees/addEmployee`, formData);
         console.log('Employee added successfully');
         navigate('/');
       } catch (error) {

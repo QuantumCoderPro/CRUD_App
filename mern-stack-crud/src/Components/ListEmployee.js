@@ -5,19 +5,24 @@ import { Link } from 'react-router-dom';
 import '../index.css';
 import deleteEmployee from './Services';
 
+
+
 const divStyle = {
   margin: '8% 8%',
 };
 
 function ListEmployee() {
   const [employees, setEmployees] = useState([]);
+  const B_URL = process.env.REACT_APP_BACKEND_URL
+console.log(B_URL)
+
 
   useEffect(() => {
     getEmployeeList();
   }, []);
 
   const getEmployeeList = () => {
-    axios.get('http://localhost:4000/employees')
+    axios.get(`${B_URL}/employees`)
       .then((response) => {
         console.log(response);
         setEmployees(response.data);

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 
+
+
 const EditEmployee = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -12,6 +14,9 @@ const EditEmployee = () => {
     email: "",
     phone: "",
   });
+
+  const B_URL = process.env.REACT_APP_BACKEND_URL
+
 
   const [errors, setErrors] = useState({
     firstName: "",
@@ -26,7 +31,7 @@ const EditEmployee = () => {
 
   const getEmployeeById = () => {
     axios
-      .get(`http://localhost:4000/employees/editEmployee/${id}`)
+      .get(`${B_URL}/employees/editEmployee/${id}`)
       .then((response) => {
         const { firstName, lastName, email, phone } = response.data;
         setFormData({
@@ -73,7 +78,7 @@ const EditEmployee = () => {
 
     if (formIsValid) {
       try {
-        await axios.post(`http://localhost:4000/employees/updateEmployee/${id}`, formData);
+        await axios.post(`${B_URL}/employees/updateEmployee/${id}`, formData);
         console.log('Employee updated successfully');
         navigate('/');
       } catch (error) {
