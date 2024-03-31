@@ -38,7 +38,7 @@ const { env } = require('process');
  
  // Setup for the server port number
  const port = process.env.PORT || 4000;
- 
+ app.get('/',(req,res)=>{res.send("hello world")})
  // Routes Configuration
  app.use('/employees', employeeRoutes);
  
