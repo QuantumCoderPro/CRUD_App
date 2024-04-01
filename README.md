@@ -16,30 +16,41 @@ This is a CRUD (Create, Read, Update, Delete) application built using React for 
 ### Front-end Dependencies
 
 npm install react-router-dom
+
 npm install react-bootstrap
+
 npm install axios
+
 
 ### Back-end Dependencies
 
 npm install mongoose
+
 npm install express
+
 npm install body-parser
+
 npm install cors
 
 
+
+
 Usage
-Clone the repository.
+
+**Clone the repository.
 Navigate to the my-app directory.
 Install dependencies for both the front-end and back-end as mentioned above.
-Run the front-end:
+Run the front-end:**
 
 cd frontend
+
 npm start
 
 
-In a separate terminal, navigate to the backend directory and run:
+**In a separate terminal, navigate to the backend directory and run:**
 
 cd backend
+
 npm start
 
 
