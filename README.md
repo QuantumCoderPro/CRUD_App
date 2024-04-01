@@ -35,7 +35,7 @@ npm install cors
 
 
 
-Usage
+## Usage
 
 **Clone the repository.
 Navigate to the my-app directory.
@@ -56,7 +56,8 @@ npm start
 
 Visit http://localhost:3000 to view the application.
 
-Live Demo
+
+## Live Demo
 Check out the live demo of the project here.
 https://crud-app-frontend-dp61.onrender.com
 
@@ -64,8 +65,10 @@ https://crud-app-frontend-dp61.onrender.com
 ![image](https://github.com/QuantumCoderPro/CRUD_App/blob/master/Screenshot%20(1183).png)
 
 
-Contributing
+## Contributing
+
 Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-License
+## License
+
 This project is licensed under the MIT License - see the LICENSE.md file for details.
