@@ -10,11 +10,11 @@ This is a CRUD (Create, Read, Update, Delete) application built using React for 
 - Cross-origin resource sharing (CORS) enabled for seamless communication between front-end and back-end.
 - Axios used for making HTTP requests from the front-end to the back-end.
 
+
 ## Installation
 
 ### Front-end Dependencies
 
-```bash
 npm install react-router-dom
 npm install react-bootstrap
 npm install axios
