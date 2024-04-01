@@ -49,7 +49,7 @@ Live Demo
 Check out the live demo of the project here.
 https://crud-app-frontend-dp61.onrender.com
 
-![image](Screenshot (1182).png)
+![image](https://github.com/QuantumCoderPro/CRUD_App/blob/master/Screenshot%20(1182).png)
 ![image](https://github.com/QuantumCoderPro/CRUD_App/assets/89980850/76009d2c-12a5-44c8-82a9-024dca656541)
 
 
