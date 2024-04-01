@@ -34,7 +34,7 @@ const { env } = require('process');
  
  // Enabled CORS
  app.use(cors({
-    origin: 'https://crud-app-frontend-dp61.onrender.com/', // Allow requests from this origin
+    origin: 'https://crud-app-frontend-dp61.onrender.com', // Allow requests from this origin
     methods: ['GET', 'POST'],         // Allow only GET and POST requests
     allowedHeaders: ['Content-Type'], // Allow only specified headers
   }));
