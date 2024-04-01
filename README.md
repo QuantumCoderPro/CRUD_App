@@ -48,7 +48,7 @@ Visit http://localhost:3000 to view the application.
 Live Demo
 Check out the live demo of the project here.
 
-![image]([https://github.com/QuantumCoderPro/CRUD_App/assets/89980850/95764746-4a9a-4bc5-8f16-f0e2abf33ac8](https://github.com/QuantumCoderPro/CRUD_App/blob/master/Screenshot%20(1180).png))
+![image](https://github.com/QuantumCoderPro/CRUD_App/blob/master/Screenshot%20(1180).png)
 ![image](https://github.com/QuantumCoderPro/CRUD_App/assets/89980850/76009d2c-12a5-44c8-82a9-024dca656541)
 
 
