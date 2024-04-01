@@ -32,12 +32,18 @@ const { env } = require('process');
  // Conver incoming data to JSON format
  app.use(bodyParser.json());
  
- // Enabled CORS
- app.use(cors({
-    origin: 'https://crud-app-frontend-dp61.onrender.com', // Allow requests from this origin
-    methods: ['GET', 'POST'],         // Allow only GET and POST requests
-    allowedHeaders: ['Content-Type'], // Allow only specified headers
-  }));
+ // Define allowed origins
+const allowedOrigins = [
+  'https://crud-app-frontend-dp61.onrender.com',
+  'http://localhost:3000'
+];
+
+// Configure CORS
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST'],         // Allow only GET and POST requests
+  allowedHeaders: ['Content-Type'], // Allow only specified headers
+}));
   
  
  // Setup for the server port number
